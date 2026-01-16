@@ -8,7 +8,8 @@ import (
 func main() {
 	var a int = 10
 
-	fmt.Println("Hello bitches")
+	fmt.Println("Woow!")
+	fmt.Println("So cool")
 
 	fmt.Println(reflect.TypeOf(a))
 }
