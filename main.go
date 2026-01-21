@@ -38,6 +38,7 @@ func modifySlice(s []int) {
 
 func modifyStr(a string) {
 	a = "sfafsfdsgsgsdfsdfs"
+	fmt.Println(a)
 }
 
 func modifyMap(m map[int]int) {
