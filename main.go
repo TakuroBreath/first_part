@@ -2,28 +2,28 @@ package main
 
 import "fmt"
 
-type Vehicle struct {
-	Speed int
+type SecretString struct {
+	secret string
 }
 
-type Bus struct {
-	Vehicle
+func NewSecretString(s string) SecretString {
+	return SecretString{
+		secret: s,
+	}
 }
 
-func (v *Vehicle) Ride() {
-	fmt.Printf("I am default behavior\n")
+func (s SecretString) Value() string {
+	return s.secret
 }
 
-// func (b *Bus) Ride() {
-// 	fmt.Printf("I am a bus! I have no speed:(\n")
-// }
+func (s SecretString) String() string {
+	return "******"
+}
 
 func main() {
-	v := &Vehicle{
-		Speed: 100,
-	}
-	b := Bus{}
-
-	v.Ride()
-	b.Ride()
+	value := "sensetive data"
+	
+	s := NewSecretString(value)
+	
+	fmt.Print(s)
 }
